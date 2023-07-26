@@ -1,0 +1,9 @@
+Given an array of integers, find the contiguous subarray with the largest sum.
+
+Steps :
+1. Get the list of number from the inputs in form of csv
+2. Parse it to a list of numbers
+3. for the 1st time 0th element of the array can be the max sum of sub array
+3. Iterate over the array list starting from 1st element
+4. Now every time the itteration is done find the max possible value of that sub array
+5. At last store the max value of that sub array and print it

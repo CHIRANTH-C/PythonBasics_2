@@ -1,0 +1,59 @@
+set high and low to be last and first elements
+divide array by 2
+compare middle element to target
+if element is greater than target, set high to mid - 1, repeat
+if element is smaller than target, set low = mid + 1
+if mid = target, return
+
+1,2,3,4,5,6,7,8,9,10
+
+low = 0 <- index
+high = 9 
+
+target is 3 
+mid = len( array - 1 ) / 2 => 4
+array[4] = 5
+array[4] and target_result 
+if they are equal => return mid
+if array[4] < target_result : low = mid + 1 => low = 5
+
+5 < 3
+low = 5
+high = 9
+6,7,8,9,10
+
+if array[4] > target_result : high = mid -1 => high = 3
+
+5 > 3
+low = 0
+high = 3
+1,2,3,4
+
+Resulting in - 
+
+low = 0 , element 1
+high = 3 , element 4
+mid = 1 , element 2
+array[mid] < target_result => low 
+2 < 3
+low = mid + 1 = 2
+high = 3
+
+
+pseudocode :
+
+step1 : take sorted list = [1,2,3,4,5,6,7,8,9,10]
+step2 : target_result = a
+step3 : low = 0
+step4 : high = length of sorted_list - 1 
+step5 : def binary_search(integer_list , target_result , low , high):
+step6 :     mid = len(integer_list) // 2 <- integer division , it will divide and round down (Eg : 5/2 = 2)
+step7 :     if target_result == integer_list[mid]
+step8 :         return mid
+step9 :     if target_result < integer_list[mid]
+step10 :        high = mid - 1
+step11 :    if target_result > integer_list[mid]
+step12 :        low = mid + 1
+step13 :    return binary_search(integer_list ,target_result , low , high)
+step14 : result_index = binary_search(sorted_list , target_result , low , high)
+step15 : print result_index

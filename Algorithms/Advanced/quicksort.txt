@@ -1,0 +1,55 @@
+choose a pivot (first or last), (middle element)
+smaller list= make a list of elements smaller than pivot
+make a list of elements bigger than pivot 
+bigger list= make a list of elements equal to pivot
+repeat quick sort on smaller list and bigger list
+return smaller + middle + bigger
+
+In the worst case, Quick Sort has a time complexity of O(n^2), 
+but on average it has a time complexity of O(n*log(n)), making it one of the fastest sorting algorithms.
+
+list of elements [5,14,5,6,83,8,99,3,45,68,9]
+middle element is 8
+small_list = all the numbers in the list which are less than 8
+middle_list = all the numbers in the list which are equal to 8
+bigger_list = all the numbers in the list which are greater than 8
+small_list = [5,5,6,3]
+middle_list = [8]
+bigger_list = [14,83,99,45,68,9]
+
+list = [5,5,6,3] middle = 5
+small_list = [3]
+middle_list = [5,5]
+bigger_list = [6]
+small_list + middle_list + bigger_list 
+
+list = [14,83,99,45,68,9]
+small_list =[14,83,45,68,9] -> [9,14,45,83,86]
+middle_list = [99]
+bigger_list = []
+
+
+
+[3,5,5,6] + [8] + [9,14,45,83,86,99]
+
+[3,5,5,6,8,9,14,45,83,86,99]
+
+pseudocode :
+
+step1 : input of csv numbers
+step2 : parse it to integer_list
+step3 : def quick_sort(integer_list):
+step3.1 :   if len(integer_list <= 1) return integer_list
+step4 :     pivot_index = (len(integer_list)-1) // 2
+step5 :     pivot = integer_list[pivot_index]
+step6 :     small_list , middle_list , bigger_list = [] , [] , []
+step7 :     for loop over elements of integer_list:
+step8 :         if element is equal to pivot:
+step9 :             add element to middle_list
+step10 :         if element is less to pivot:
+step11 :             add element to small_list
+step12 :         if element is greater to pivot:
+step13 :             add element to bigger_list
+step14 : return quick_sort(small_list) + middle_list + quick_sort(bigger_list)
+step15 : sorted_list = quick_sort(integer_list)
+step16 : print sorted_list

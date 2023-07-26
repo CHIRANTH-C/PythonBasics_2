@@ -1,0 +1,7 @@
+# count of strings in a list that have a string length greater than 5
+# 1. Get input from the users , expecting coma seperated values of string (Eg : hi,this,good,number)
+# 2. Split the input with coma seperated and parse it to the list
+# 3. count = 0
+# 4. for loop over word list:
+# 5.    if len of (string_no) > 5
+# 6.    add 1 to count

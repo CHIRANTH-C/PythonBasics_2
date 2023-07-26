@@ -1,0 +1,26 @@
+ Knapsack problem:
+Given a knapsack with a weight limit of W and a set of N items, 
+each with a weight Wi and a value Vi, determine the maximum value 
+that can be obtained by selecting a subset of items to put in the knapsack. 
+The total weight of the selected items must be less than or equal to W.
+Assume the list of items is from 1 to 10 with weights 1 to 10 respectively. 
+The algorithm takes the capcaity of W as the input.
+
+Steps :
+1. Get the list of number from the inputs in form of csv
+2. Parse it to a list of numbers
+3. Initialize a table T of size (N+1) x (W+1) with all elements set to 0.
+4. T[i][j] represents the maximum value that can be obtained with a weight limit of j 
+    and the first i items.
+5. Iterate over each item i from 1 to N:
+        5.1. Iterate over each weight limit j from 1 to W:
+                5.1.1. If the weight of item i (Wi) is greater 
+                        than the current weight limit j, then T[i][j] = T[i-1][j], 
+                        meaning that we cannot select item i.
+                5.1.2. Otherwise, we have two options:
+                        5.1.2.1. We do not select item i: T[i][j] = T[i-1][j]
+                        5.1.2.2. We select item i: T[i][j] = max(T[i-1][j-Wi] + Vi, T[i-1][j]), 
+                                 meaning that we take the maximum value between selecting item i 
+                                 and not selecting item i.
+6. Return the value of T[N][W], which represents the maximum value that 
+   can be obtained with a weight limit of W and all N items.

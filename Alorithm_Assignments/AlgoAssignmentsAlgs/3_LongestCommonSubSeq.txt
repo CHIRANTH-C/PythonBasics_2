@@ -1,0 +1,9 @@
+Given two strings, find the length of their longest common subsequence.
+
+Steps :
+1. Get two strings , as input from the console
+2. Create a two dimentional array in which each cell has length of longest string
+3. Itterate over both the strings
+4. For each element in 1st string itterate over all the elements in 2nd string
+5. If the values in both the strings match save the value in the 2D array
+6. If its not match fill rest of the values in the 2 D array by max value in its array

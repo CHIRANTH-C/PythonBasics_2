@@ -1,0 +1,12 @@
+Implement Selection Sort
+
+Steps :
+1. Get the list of number from the inputs in form of csv
+2. Parse it to a list of numbers
+3. Define the min_idx value.
+4. Initialize it with 0th element.
+5. Iterate over the input array list and starting from the min_idx element.
+6. Compare the min_idx element with rest of the arrays section.
+5. If found any lower valued element swap it with the min_idx element.
+6. Now increate the min_idx element to next value.
+7. Iterate again with rest of the arrays section.

@@ -1,0 +1,11 @@
+# Given an array of integers and a target value, find two numbers that add up to the target value.
+
+Steps :
+
+1. Get the list of number from the inputs in form of csv
+2. Parse it to a list of numbers
+3. Get the target number from the inputs and store it in an integer variable
+4. Iterate over each element in the array one by one
+5. Subtract each element in the array by the target value
+6. If the current number is not there in the dictionary then add that number to the dictionary
+7. After itterating through enite array and have not found any value return empty array

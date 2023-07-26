@@ -1,0 +1,10 @@
+# recursive functions introduction
+
+Step 1 : input of n
+Step 2 : type cast n to int
+Step 3 : function factorial(n):
+Step 4 :        if n is 0 or n is 1 :
+Step 5 :            return 1
+Step 6 :        factorial_result = n * factorial(n-1) <- recursive function call is happening
+Step 7 :    return factorial_result
+Step 8 : print factorial(n)

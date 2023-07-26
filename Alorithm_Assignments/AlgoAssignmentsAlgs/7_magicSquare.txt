@@ -1,0 +1,14 @@
+Magic Square
+
+Steps :
+1. Get the order of the magic square from the console input.
+2. Create an empty matrix of that order.
+3. Start filling the magic square.
+4. Set the 1st position to 0 and n/2 , which top and middle row.
+5. For each number from 1 to n^2:
+    a. Insert the number in the current position.
+    b. If the current position is the bottom-right corner, move to the top-left corner (wrap-around).
+    c. If the next position is already filled with a number, move down one row.
+    d. If the next position is outside the array, move to the opposite side of the array.
+    e. Move to the next position.
+6. Itterate over the magic square and print the same.

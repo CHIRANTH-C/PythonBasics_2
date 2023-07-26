@@ -1,0 +1,10 @@
+Kadane's Algorithm.
+
+Steps :
+1. Get the list of number from the inputs in form of csv.
+2. Parse it to a list of numbers.
+3. Consider two elements , one that stores maximum end of the subarray
+    and another one which stores the maximum sum so far.
+4. Initialise both of them to 0.
+5. Each time we get the positive sum , we compare it with the max sum so far.
+6. Update the max sum so far if new sum is greater than max sum so far.

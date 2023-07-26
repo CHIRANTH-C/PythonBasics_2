@@ -1,0 +1,8 @@
+Implement bubble sort.
+
+Steps :
+1. Get the list of number from the inputs in form of csv
+2. Parse it to a list of numbers
+3. Itterate over the input array
+4. Compare each value with the next value
+5. If the 1st value is > 2nd value then swap between them

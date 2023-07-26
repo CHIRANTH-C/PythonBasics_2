@@ -1,0 +1,6 @@
+for odd order
+matrix = np.zeros((n, n))
+Start with a partially filled square with the first number (1) in the center of the first row of the square.
+Move diagonally up and to the right to fill in the next number. If a number falls outside of the square, wrap around to the opposite side of the square.
+If a cell is already filled, move down one row and fill in the next number in the same column.
+Repeat steps 2 and 3 until all cells are filled.
